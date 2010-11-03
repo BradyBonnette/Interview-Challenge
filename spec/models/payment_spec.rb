@@ -3,7 +3,8 @@ require 'spec_helper'
 describe Payment do
 
 	before(:each) do
-		@payment = Payment.new(:customer_name=>"Bob", :customer_address=>"Beverly Hills, 90210")
+		@payment = Payment.new(:customer_name=>"Bob", :customer_address=>"Beverly Hills, 90210",
+                          :customer_email=>"bob@bob.com")
 	end
 
 	it "should be invalid when customer name is not specified" do
