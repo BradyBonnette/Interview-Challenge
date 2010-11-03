@@ -9,6 +9,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 group :test do
   gem 'rspec-rails', '>=2.0.0.beta.10'
+  gem "autotest"
+  gem "autotest-rails"
 end
 
 group :cucumber do
