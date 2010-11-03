@@ -1,4 +1,10 @@
 Interview::Application.routes.draw do
+
+  match "/payment" => "payment#index"
+  get "payment/index"
+  post "payment/create"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
