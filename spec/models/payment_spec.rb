@@ -22,4 +22,9 @@ describe Payment do
 		@payment.valid?.should == false
 	end
 
+  it "should get the correct partial form name based from the 'Payment Type' using #get_processed_partial" do
+    @payment.type = "Payment::PaymentType"
+    @payment.get_processed_partial.should eql("PaymentType".downcase)
+  end
+
 end
