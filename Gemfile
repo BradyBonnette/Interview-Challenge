@@ -16,8 +16,9 @@ end
 group :cucumber do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'cucumber-rails'
-  gem 'cucumber', '0.7.3'
+  gem 'cucumber-rails', '>=0.3.2'
+  gem 'cucumber', '>=0.8.5'
+  gem 'gherkin', '2.2.9'
   gem 'rspec-rails', '>= 2.0.0.beta.10'
   gem 'spork'
   gem 'launchy'
