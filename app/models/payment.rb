@@ -14,9 +14,9 @@ class Payment < ActiveRecord::Base
   # Parse out the class name, downcase it and use this for the
   # partial to render in the 'processed' view.
   def get_processed_partial
-    return if self.type == nil
+    return if self.class.name == nil
 
-    self.type.split("::").last.downcase
+    self.class.name.split("::").last.downcase
   end
 
 end

@@ -1,2 +1,16 @@
-<h1>Payment#index</h1>
-<p>Find me in app/views/payment/index.html.erb</p>
+<h1> Create a payment </h1>
+<%= form_for @payment, :as=>:payment, :url=>{:action=>"create"} do |form| %>
+  <%= label(:payment, :type, "Payment Type") %>
+  <%= select :payment, :type, [["Book", "Payment::Book"], ["Membership", "Payment::Membership"],["Physical Object", "Payment::PhysicalObject"]]  %><br />
+
+  <%= label(:payment, :customer_name, "Customer Name") %>
+  <%= form.text_field :customer_name %><br />
+
+  <%= label(:payment, :customer_address, "Customer Address") %>
+  <%= form.text_field :customer_address%><br />
+
+  <%= label(:payment, :customer_email, "Customer Email") %>
+  <%= form.text_field :customer_email%><br />
+
+  <%= submit_tag("Create Payment") %>
+<% end %>
