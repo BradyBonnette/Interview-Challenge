@@ -23,7 +23,7 @@ describe Payment do
 	end
 
   it "should get the correct partial form name based from the 'Payment Type' using #get_processed_partial" do
-    @payment.type = "Payment::PaymentType"
+		@payment.stub!(:get_class_name).and_return("Payment::PaymentType")
     @payment.get_processed_partial.should eql("PaymentType".downcase)
   end
 

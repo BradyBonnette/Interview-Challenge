@@ -5,11 +5,16 @@ class PaymentController < ApplicationController
   end
 
   def create
+
+		if params[:payment].nil? || params[:payment].empty?
+			redirect_to :action=>'create'
+			return
+		end
+
 		@payment = Payment.create(params[:payment]).becomes(eval params[:payment][:type])
-    puts @payment
+
 		if @payment.valid?
 			@payment.process_order
-      puts @payment
 			render 'processed'
 		else
 			redirect_to :action=>'create'

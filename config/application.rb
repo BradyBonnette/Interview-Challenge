@@ -43,6 +43,5 @@ module Interview
       g.test_framework :rspec
     end
 
-
   end
 end

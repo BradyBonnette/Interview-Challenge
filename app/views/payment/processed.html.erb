@@ -1,2 +1,7 @@
-<h1>Payment#processed</h1>
+<h1>Payment processed.</h1>
+
+<h4>Action Message: <%= @payment.action_message %></h4>
+
 <p><%= render(:partial=>@payment.get_processed_partial)%></p>
+
+<%= link_to "<- Back to New Payment", :action=>:index %>

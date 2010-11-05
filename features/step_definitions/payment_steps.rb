@@ -12,3 +12,4 @@ Then /^I should see a (.+) for \"(.+)\"$/ do |item,title|
       page.should have_xpath("//input[@type='submit' and @value='#{title}']")
   end
 end
+
