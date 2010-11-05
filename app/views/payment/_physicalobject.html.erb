@@ -1,7 +1,4 @@
-<div style="border:1px solid">
-  <p>Packing Slip<p>
-  <p>Customer name: <%= @payment.customer_name%></p>
-  <p>Customer address: <%= @payment.customer_address%></p>
-  <p>Customer email: <%= @payment.customer_email%></p>
+<div class="packing_slip">
+	<p class="packing_slip_header">Packing Slip<p>
+  <%= render(:partial=>"packing_slip_details") %>
 </div>
-

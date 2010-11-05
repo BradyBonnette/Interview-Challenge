@@ -1,0 +1,84 @@
+body {
+  background-color:#20B2AA !important;
+}
+
+#container{
+  background-color: white !important;
+  position: absolute;
+  top:      50%;
+  height:   500px;
+  width:    800px;
+  margin-top:-250px;
+  border: 5px solid;
+  left: 50%;
+  margin-left: -400px;
+}
+
+#caption{
+  padding: 5px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#container form {
+  padding: 10px 20px 20px 20px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container form table {
+  border-top:  1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container form td {
+  padding: 10px 25px 0px 0px;
+}
+
+#submit {
+  text-align: right;
+}
+
+#action {
+  padding: 10px 5px 10px 5px;
+}
+ 
+#action span {
+  color: green;
+  font-style: italic;
+}
+
+.packing_slip {
+  border: 1px solid black;
+  width: 650px;
+  padding: 5px;
+  margin: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.packing_slip_header {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.back_link {
+  text-align: left;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 18px;
+  margin: 5px 5px 10px 5px;
+}
+
+.membership_email {
+  padding: 5px;
+  border: 1px solid;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
