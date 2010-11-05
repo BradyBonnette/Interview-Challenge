@@ -1,1 +1,13 @@
-<p>This is a membership partial</p>
+<div class="membership_email">
+  <p>Greetings <%= @payment.customer_name%>,</p><br />
+  <p>This email is to confirm your membership to Our Special Company&reg;
+    We received your membership payment, received on <%= @payment.created_at.strftime("%A, %B %d, %Y at %I:%M:%S %p") %>,
+    from email address &quot;<%= @payment.customer_email%>&quot;. <p><br />
+  <p>If the information is not correct, please send an email to support@ourspecialcompany.com immedately so the issue
+can be resolved</p><br />
+<p>Thank you very much for your membership purchase!</p><br />
+<p>Sincerely,</p><br /><br />
+<p>Brady Bonnette</p>
+<p>CEO of Our Special Company&reg;</p>
+
+</div>
