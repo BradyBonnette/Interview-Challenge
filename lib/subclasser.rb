@@ -1,6 +1,10 @@
+# A simple module to find subclasses of a particular class.
+# As far as I know, there is no easy way to do this in Rails,
+# especially with its lazy loading.
 module Subclasser
 
-  # Slight tweak to aid in performance
+  # Slight tweak to aid in performance -- Keep a cache of
+	# past searched items.
   @@static_subclass_list = {}
 
   def self.get_subclasses_for(parent_class)

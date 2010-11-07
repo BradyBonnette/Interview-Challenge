@@ -1,9 +1,10 @@
 require 'subclasser'
+
 class Payment < ActiveRecord::Base
 
   include Subclasser
   #  These are necessary to complete an order.
-	validates_presence_of :customer_name, :customer_address, :customer_email
+	validates_presence_of :customer_name, :customer_address, :customer_email, :type
 
   # This is the header of the page that gets displayed after the order is processed.
   attr_accessor :action_message
@@ -16,7 +17,6 @@ class Payment < ActiveRecord::Base
   # Parse out the class name, downcase it and use this for the
   # partial to render in the 'processed' view.
   def get_processed_partial
-    puts Subclasser.get_subclasses_for(:Payment)
 		name = get_class_name
 
 		return if name.nil?
@@ -24,7 +24,7 @@ class Payment < ActiveRecord::Base
 		name.split("::").last.downcase
   end
   
-	#  Use this class so we can stub it out for testing.
+	#  Use this method for easier testing
 	def get_class_name
 		return self.class.name
 	end

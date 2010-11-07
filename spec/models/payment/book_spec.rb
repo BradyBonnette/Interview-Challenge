@@ -15,7 +15,5 @@ describe Payment::Book do
     @book_payment.action_message.should eql(nil)
     @book_payment.process_order
     @book_payment.action_message.should eql("Creating Duplicate Packing Slips, One For The Royalty Department")
-
   end
-
 end

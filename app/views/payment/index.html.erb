@@ -1,29 +1,29 @@
 <p id="caption"> Create a payment </p>
 <%= form_for @payment, :as=>:payment, :url=>{:action=>"create"}, do |form| %>
-  <table>
-    <tr>
-      <td><%= label(:payment, :type, "Payment Type") %></td>
-      <td><%= select :payment, :type, @payment_list_items%></td>
-    </tr>
+	<table>
+		<tr>
+			<td><%= label(:payment, :type, "Payment Type") %></td>
+			<td><%= select :payment, :type, @payment_list_items%></td>
+		</tr>
 
-    <tr>
-      <td><%= label(:payment, :customer_name, "Customer Name") %></td>
-      <td><%= form.text_field :customer_name %></td>
-    </tr>
+		<tr>
+			<td><%= label(:payment, :customer_name, "Customer Name") %></td>
+			<td><%= form.text_field :customer_name %></td>
+		</tr>
 
-    <tr>
-      <td><%= label(:payment, :customer_address, "Customer Address") %></td>
-      <td><%= form.text_field :customer_address%></td>
-    </tr>
+		<tr>
+			<td><%= label(:payment, :customer_address, "Customer Address") %></td>
+			<td><%= form.text_field :customer_address%></td>
+		</tr>
 
-    <tr>
-      <td><%= label(:payment, :customer_email, "Customer Email") %></td>
-      <td><%= form.text_field :customer_email%><br /></td>
-    </tr>
+		<tr>
+			<td><%= label(:payment, :customer_email, "Customer Email") %></td>
+			<td><%= form.text_field :customer_email%><br /></td>
+		</tr>
 
-    <tr>
-      <td>&nbsp;</td>
-      <td id="submit"><%= submit_tag("Create Payment") %></td>
-    </tr>
-  </table>
+		<tr>
+			<td>&nbsp;</td>
+			<td id="submit"><%= submit_tag("Create Payment") %></td>
+		</tr>
+	</table>
 <% end %>

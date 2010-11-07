@@ -1,6 +1,9 @@
 Given /^I want to go to the \"Create New Payment\" site$/ do
 end
 
+# Match an html object associated with a particular label,
+# assuming a particular naming convention.
+# e.g. Customer Name = customer_name
 Then /^I should see a (.+) for \"(.+)\"$/ do |item,title|
   id = title.split.join("_").downcase
   case item
@@ -11,5 +14,9 @@ Then /^I should see a (.+) for \"(.+)\"$/ do |item,title|
     when /button/
       page.should have_xpath("//input[@type='submit' and @value='#{title}']")
   end
+end
+
+Then /^I should see an error message$/ do
+	page.should have_selector '#notice'
 end
 

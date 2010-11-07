@@ -75,6 +75,24 @@ body {
   margin: 5px 5px 10px 5px;
 }
 
+#notice {
+	position: absolute;
+	background-color:white !important;
+	top: 1px;
+	margin-top:1px;
+	width: 800px;
+	height: 50px;
+	left: 50%;
+  margin-left:-400px;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+#notice img {
+	float: left;
+	padding-right: 10px;
+}
+
 .membership_email {
   padding: 5px;
   border: 1px solid;
